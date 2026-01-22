@@ -1,0 +1,358 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Red Lens Reader</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <style>
+    {
+      box-sizing: border-box;
+    }
+
+    html,
+    body {
+      margin: 0;
+      padding: 0;
+      background: dimgrey;
+      overflow: hidden;
+    }
+
+    /* header with centered logo */
+    header {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      padding: 20px;
+      background: dimgrey;
+      z-index: 2;
+      text-align: center;
+	  user-select: none;
+    }
+
+    header img {
+      height: 10vh;
+    }
+
+    /* main layout container */
+    #container {
+      position: relative;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 40px;
+      width: 100%;
+      height: 80vh;
+      margin-top: 10vh; /* offset for header */
+    }
+
+    /* the book is displayed in here */
+    #wrapper {
+      position: relative;
+      width: 55vw;
+      height: 70vh;
+      overflow: hidden;
+      user-select: none;
+      flex-shrink: 0;
+    }
+
+    #page,
+    #hiddenpage {
+      position: absolute;
+      inset: 0;
+      width: 100%;
+      height: 100%;
+      object-fit: contain;
+      pointer-events: none;
+	}
+
+    #hiddenpage {
+      z-index: 2;
+      clip-path: inset(0 0 100% 0);
+    }
+
+    /* Movable Red Lens */
+    #adventurewindow {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 20vw;
+      aspect-ratio: 746 / 444; /* adjust on adventure window used */
+      z-index: 3;
+      background: url(data:image/png;base64,) no-repeat center center;
+      background-size: contain;
+      cursor: grab;
+      user-select: none;
+      touch-action: none;
+    }
+
+    /* navigation arrows */
+    .arrow {
+      font-size: 60px;
+      color: red;
+      cursor: pointer;
+      user-select: none;
+      z-index: 2;
+      padding: 20px;
+      transition: transform 0.2s ease, opacity 0.3s ease;
+      font-weight: bold;
+    }
+
+    .arrow:hover {
+      transform: scale(1.2);
+      opacity: 0.8;
+    }
+
+    #arrow-left {
+      order: -1;
+    }
+
+    #arrow-right {
+      order: 1;
+    }
+	
+	/* chechbox for hidden pages */
+	#toggle-box {
+      position: fixed;
+      bottom: 5%;
+      left: 50%;
+      transform: translateX(-50%); /* Shifts back by half its width to center */
+      z-index: 3;
+      color: white;
+      font-family: sans-serif;
+      font-size: 14px;
+	  user-select: none;
+    }
+	
+  </style>
+</head>
+
+<body>
+	<header>
+		<img <img src='data:image/png;base64,'/>
+	</header>
+
+   
+	<div id="container">
+		<div id="wrapper">
+			<img id="page" src='data:image/jpeg;base64,'/>
+			<img id="hiddenpage" src=/>
+		</div>
+		<span id="arrow-left" class="arrow" tabindex="0">←</span>
+		<span id="arrow-right" class="arrow" tabindex="0">→</span>
+	</div>
+  
+	<div id="toggle-box">
+		<label>
+			<input type="checkbox" id="toggle-hidden">
+			Always show hidden page
+			</label>
+	</div>
+  
+	<div id="adventurewindow"></div>
+
+	<script>
+    document.addEventListener('DOMContentLoaded', () => {
+		let currentPage = 1;
+		const totalPages = 25; // adjust on actual number of pages
+
+
+	const base64Pages = {
+		'01': 'data:image/jpeg;base64,',
+		'02': 'data:image/jpeg;base64,',
+		'03': 'data:image/jpeg;base64,',
+		'04': 'data:image/jpeg;base64,',
+		'05': 'data:image/jpeg;base64,',
+		'06': 'data:image/jpeg;base64,',
+		'07': 'data:image/jpeg;base64,',
+		'08': 'data:image/jpeg;base64,',
+		'09': 'data:image/jpeg;base64,',
+		'10': 'data:image/jpeg;base64,',
+		'11': 'data:image/jpeg;base64,',
+		'12': 'data:image/jpeg;base64,',
+		'13': 'data:image/jpeg;base64,',
+		'14': 'data:image/jpeg;base64,',
+		'15': 'data:image/jpeg;base64,',
+		'16': 'data:image/jpeg;base64,',
+		'17': 'data:image/jpeg;base64,',
+		'18': 'data:image/jpeg;base64,',
+		'19': 'data:image/jpeg;base64,',
+		'20': 'data:image/jpeg;base64,',
+		'21': 'data:image/jpeg;base64,',
+		'22': 'data:image/jpeg;base64,',
+		'23': 'data:image/jpeg;base64,',
+		'24': 'data:image/jpeg;base64,',
+		'25': 'data:image/jpeg;base64,',
+	};
+
+	const base64HiddenPages = {
+		'03': 'data:image/jpeg;base64,',
+		'04': 'data:image/jpeg;base64,',
+		'05': 'data:image/jpeg;base64,',
+		'06': 'data:image/jpeg;base64,',
+		'07': 'data:image/jpeg;base64,',
+		'08': 'data:image/jpeg;base64,',
+		'09': 'data:image/jpeg;base64,',
+		'10': 'data:image/jpeg;base64,',
+		'11': 'data:image/jpeg;base64,',
+		'12': 'data:image/jpeg;base64,',
+		'13': 'data:image/jpeg;base64,',
+		'14': 'data:image/jpeg;base64,',
+		'15': 'data:image/jpeg;base64,',
+		'16': 'data:image/jpeg;base64,',
+		'17': 'data:image/jpeg;base64,',
+		'18': 'data:image/jpeg;base64,',
+		'19': 'data:image/jpeg;base64,',
+		'20': 'data:image/jpeg;base64,',
+	};
+
+    const wrapper = document.getElementById('wrapper');
+    const pageImg = document.getElementById('page');
+    const hidden = document.getElementById('hiddenpage');
+    const windowEl = document.getElementById('adventurewindow');
+    const arrowLeft = document.getElementById('arrow-left');
+    const arrowRight = document.getElementById('arrow-right');
+	const toggleHidden = document.getElementById('toggle-hidden');
+	  
+    let isDragging = false;
+    let startX, startY, initialLeft, initialTop;
+
+    // disable native drag on images
+    document.querySelectorAll('img').forEach(img => (img.draggable = false));
+
+    function updateArrows() {
+		arrowLeft.style.visibility = currentPage <= 1 ? 'hidden' : 'visible';
+        arrowRight.style.visibility = currentPage >= totalPages ? 'hidden' : 'visible';
+    }
+
+    function updatePages() {
+		const pageStr = String(currentPage).padStart(2, '0');
+  
+		const mainSrc = base64Pages[pageStr];
+		const hiddenSrc = base64HiddenPages[pageStr];
+
+		pageImg.src = mainSrc;
+
+		hidden.onerror = () => {
+		hidden.onerror = null;
+		hidden.src = mainSrc;
+		};
+
+		hidden.onload = () => {
+          // when page image loads, apply correct mode
+			if (toggleHidden.checked) {
+				showHiddenFully();
+			} 
+			else {
+            updateClipPath();
+			}
+        };
+
+		hidden.src = hiddenSrc;
+	}
+	
+    function changePage(direction) {
+        currentPage = Math.max(1, Math.min(currentPage + direction, totalPages));
+        updateArrows();
+        updatePages();
+    }
+
+		// navigation via click and keyboard
+		arrowLeft.addEventListener('click', () => changePage(-1));
+		arrowRight.addEventListener('click', () => changePage(1));
+
+		document.addEventListener('keydown', (e) => {
+			if (e.key === 'ArrowLeft') changePage(-1);
+			if (e.key === 'ArrowRight') changePage(1);
+		});
+
+	// helper to show hidden page
+    function showHiddenFully() {
+		hidden.style.clipPath = 'none';
+    }
+	  
+    function updateClipPath() {
+        // do not mask if toggle is on
+        if (toggleHidden.checked) {
+			showHiddenFully();
+			return;
+        }
+
+        const wrapperRect = wrapper.getBoundingClientRect();
+        const winRect = windowEl.getBoundingClientRect();
+
+        const x = winRect.left - wrapperRect.left;
+        const y = winRect.top - wrapperRect.top;
+        const width = winRect.width;
+        const height = winRect.height;
+
+        // keep within wrapper bounds
+        const topInset = Math.max(0, y);
+        const leftInset = Math.max(0, x);
+        const bottomInset = Math.max(0, wrapperRect.height - (y + height));
+        const rightInset = Math.max(0, wrapperRect.width - (x + width));
+
+        hidden.style.clipPath = `inset(${topInset}px ${rightInset}px ${bottomInset}px ${leftInset}px)`;
+    }
+
+      // drag logic
+    windowEl.addEventListener('mousedown', (e) => {
+        isDragging = true;
+        windowEl.classList.add('dragging');
+
+        const rect = windowEl.getBoundingClientRect();
+        initialLeft = rect.left;
+        initialTop = rect.top;
+        startX = e.clientX;
+        startY = e.clientY;
+
+        windowEl.style.transform = 'none';
+        windowEl.style.left = `${initialLeft}px`;
+        windowEl.style.top = `${initialTop}px`;
+    });
+
+    document.addEventListener('mousemove', (e) => {
+		if (!isDragging) return;
+
+        const dx = e.clientX - startX;
+        const dy = e.clientY - startY;
+        let newX = initialLeft + dx;
+        let newY = initialTop + dy;
+
+        newX = Math.max(0, Math.min(newX, window.innerWidth - windowEl.offsetWidth));
+        newY = Math.max(0, Math.min(newY, window.innerHeight - windowEl.offsetHeight));
+
+        windowEl.style.left = `${newX}px`;
+        windowEl.style.top = `${newY}px`;
+
+        requestAnimationFrame(updateClipPath);
+    });
+
+    document.addEventListener('mouseup', () => {
+        if (isDragging) {
+			isDragging = false;
+			windowEl.classList.remove('dragging');
+        }
+    });
+
+    window.addEventListener('resize', updateClipPath);
+
+    // toggle handler
+    toggleHidden.addEventListener('change', () => {
+        if (toggleHidden.checked) {
+			showHiddenFully();
+        } 
+		else {
+          updateClipPath();
+        }
+    });
+	  
+    // initialize
+	updateArrows();
+	updateClipPath();
+	updatePages();
+    });
+  </script>
+</body>
+</html>
