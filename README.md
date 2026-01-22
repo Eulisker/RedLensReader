@@ -27,3 +27,9 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
   ![Lucasfilm Games Copy Protection Lens](/pics/lucas.jpeg "Lucasfilm Games Copy Protection Lens")
 - The Lucasfilm Games Hintbooks had a piece of red gel and not the Window I use in the Reader. The copy protection in Loom and Indy 3 uses it and I think it looks better in the hintbook too.  
   ![Indiana Jones and the Last Crusade Hintbook](/pics/indy.jpeg "Indiana Jones and the Last Crusade Hintbook")
+
+#### Thanks
+- GBuster and gschmidl for coding help
+- Timber for moral support and great suggestions
+- oldgames.sk for their interactive codewheels
+- pix for allowing me to use his Lucasfilm Hintbook Scans
