@@ -1,0 +1,5 @@
+26-01-22
+- added hintbooks for Indiana Jones 3, Monkey Island 2, Zak McKracken and Loom
+
+26-01-22
+- initial release
