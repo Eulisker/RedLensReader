@@ -8,7 +8,11 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
 ## Hintbooks
 - Code-Name: Iceman [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Code-Name%20-%20Iceman%20(1989)%20Hintbook%20Reader.html)
 - Gold Rush! [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Gold%20Rush!%20(1988)%20Hintbook%20Reader.html)
+- Indiana Jones and the Last Crusade
+- Loom
 - Maniac Mansion [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Maniac%20Mansion%20(1987)%20Hintbook%20Reader.html)
+- Monkey Island 2 - LeChuck's Revenge
+- Zak McKracken and the Alien Mindbenders
 
 ## Copy Protection
 - Indiana Jones and the Last Crusade [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Indiana%20Jones%20and%20the%20Last%20Crusade%20(1989)%20Copy%20Protection%20Reader.html)
