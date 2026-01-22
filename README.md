@@ -2,17 +2,17 @@
 
 This project emulates the old Hintbooks and Copy Protections where you had to use a red lens to read the text.  
 ![Animated Hintbook](/pics/hintbook%20animated.gif)  
-You can get all the examples directly from github. Also every Book has a base64 version you can download right here. (right click -> save as...)
-You can even try it out here (link)
+You can get all the examples directly from github. Also every Book has a base64 version you can download right here. (right click -> save as...)  
+You can simply try it ([here](https://red-lens-reader.vercel.app/))
 
 ## Hintbooks
-- Code-Name: Iceman [base64]()
-- Gold Rush! [base64]()
-- Maniac Mansion [base64]()
+- Code-Name: Iceman [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Code-Name%20-%20Iceman%20(1989)%20Hintbook%20Reader.html)
+- Gold Rush! [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Gold%20Rush!%20(1988)%20Hintbook%20Reader.html)
+- Maniac Mansion [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Maniac%20Mansion%20(1987)%20Hintbook%20Reader.html)
 
 ## Copy Protection
-- Indiana Jones and the Last Crusade [base64]()
-- Loom [base64]()
+- Indiana Jones and the Last Crusade [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Indiana%20Jones%20and%20the%20Last%20Crusade%20(1989)%20Copy%20Protection%20Reader.html)
+- Loom [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Loom%20(1990)%20Copy%20Protection%20Reader.html)
 
 ### Limitations
 - The Adventure window shows the hidden page under all the transparencies. This means you can not have irregular shaped windows at the moment.
