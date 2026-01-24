@@ -37,3 +37,4 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
 - Timber for moral support and great suggestions
 - oldgames.sk for their interactive codewheels
 - pix for allowing me to use his Lucasfilm Hintbook Scans
+- meatbug for his Maniac Mansion Hintbook scan
