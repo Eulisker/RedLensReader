@@ -9,6 +9,8 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
 - Code-Name: Iceman [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Code-Name%20-%20Iceman%20(1989)%20Hintbook%20Reader.html)
 - Gold Rush! [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Gold%20Rush!%20(1988)%20Hintbook%20Reader.html)
 - Indiana Jones and the Last Crusade
+- Laura Bow - The Colonels Bequest
+- Laura Bow 2 - The Dagger of Amon Ra
 - Loom
 - Maniac Mansion [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Maniac%20Mansion%20(1987)%20Hintbook%20Reader.html)
 - Monkey Island 2 - LeChuck's Revenge
