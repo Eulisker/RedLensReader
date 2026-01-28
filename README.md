@@ -38,3 +38,4 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
 - oldgames.sk for their interactive codewheels
 - pix for allowing me to use his Lucasfilm Hintbook Scans
 - meatbug for his Maniac Mansion Hintbook scan
+- Telev for the Laura Bow 1 and 2 Hintbook
