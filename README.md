@@ -11,6 +11,7 @@ You can simply try it ([here](https://red-lens-reader.vercel.app/))
 - Indiana Jones and the Last Crusade [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Indiana%20Jones%20and%20the%20Last%20Crusade%20(1989)%20Hintbook%20Reader%2064.html)
 - Laura Bow - The Colonels Bequest [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Laura%20Bow%20-%20The%20Colonels%20Bequest%20(1989)%20Hintbook%20Reader%2064.html)
 - Laura Bow 2 - The Dagger of Amon Ra [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Laura%20Bow%202%20-%20The%20Dagger%20of%20Amon%20Ra%20(1992)%20Hintbook%20Reader%2064.html)
+- Leisure Suit Larry 5 - Passionate Patti Does a Little Undercover Work
 - Loom [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Loom%20(1990)%20Hintbook%20Reader%2064.html)
 - Maniac Mansion [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Maniac%20Mansion%20(1987)%20Hintbook%20Reader%2064.html)
 - Monkey Island 2 - LeChuck's Revenge [base64](https://github.com/Eulisker/RedLensReader/raw/refs/heads/main/base64/Monkey%20Island%202%20-%20LeChuck's%20Revenge%20(1991)%20Hintbook%20Reader%2064.html)
