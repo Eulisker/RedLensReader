@@ -1,3 +1,6 @@
+26-02-11
+- added Larry 5 Hintbook
+
 26-01-30
 - converted all to base64
 
