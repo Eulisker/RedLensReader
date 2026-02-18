@@ -1,35 +1,83 @@
 <!doctype html>
 <html>
-	<head>
-		<title>Red Lens Reader</title>
-	</head>
-	<body style="background-color:dimgrey;">
-		<a><font size=8><b>Red Lens Reader</b></font></a><br><br>
-		<a><font size=5>Hintbooks</font></a><br><br>
-		<a href="examples/Code-Name - Iceman (1989) Hintbook Reader.html"><img src="pics/iceman.png"</a>
-		<a href="examples/Gold Rush! (1988) Hintbook Reader.html"><img src="pics/goldrush.png"</a>
-		<a href="examples/Indiana Jones and the Last Crusade (1989) Hintbook Reader.html"><img src="pics/indy3.png"</a>
-		<a href="examples/Laura Bow - The Colonels Bequest (1989) Hintbook Reader.html"><img src="pics/laura1.png"</a>
-		<a href="examples/Laura Bow 2 - The Dagger of Amon Ra (1992) Hintbook Reader.html"><img src="pics/laura2.png"</a>
-		<a href="examples/Leisure Suit Larry 5 - Passionate Patti Does a Little Undercover Work (1991) Hintbook Reader.html"><img src="pics/larry5.png"</a>
-		<a href="examples/Loom (1990) Hintbook Reader.html"><img src="pics/loom.png"</a>
-		<a href="examples/Maniac Mansion (1987) Hintbook Reader.html"><img src="pics/maniac.png"</a>
-		<a href="examples/Monkey Island 2 - LeChuck's Revenge (1991) Hintbook Reader.html"><img src="pics/monkey2.png"</a>
-		<a href="examples/Zak McKracken and the Alien Mindbenders (1988) Hintbook Reader.html"><img src="pics/zak.png"</a><br><br><br>
-		<a><font size=5>Copy Protection</font></a><br><br>
-		<a href="examples/Indiana Jones and the Last Crusade (1989) Copy Protection Reader.html"><img src="pics/indy3.png"</a>
-		<a href="examples/Loom (1990) Copy Protection Reader.html"><img src="pics/loom.png"</a>
-		
+  <head>
+    <title>Red Lens Reader</title>
+    <style>
+      body {
+        background-color: dimgrey;
+        color: black;
+        text-align: center;
+        font-family: Calibri, sans-serif;
+        margin: 40px;
+      }
 
+      h1 {
+        font-size: 48px;
+        margin-bottom: 30px;
+      }
 
-	</body>
+      h2 {
+        font-size: 28px;
+        margin-top: 60px;
+        margin-bottom: 30px;
+      }
 
+      .link-grid {
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+        gap: 25px;
+        justify-items: center;
+        align-items: center;
+        max-width: 1400px;
+        margin: 0 auto;
+      }
+
+      .link-grid a img {
+        width: 100%;
+        max-width: 240px;
+        height: auto;
+        transition: transform 0.2s ease;
+      }
+
+      .link-grid a img:hover {
+        transform: scale(1.05);
+      }
+
+    @media (max-width: 600px) {
+        body {
+          margin: 20px;
+        }
+        h1 {
+          font-size: 36px;
+        }
+        h2 {
+          font-size: 22px;
+        }
+      }
+    </style>
+  </head>
+
+  <body>
+    <h1>Red Lens Reader</h1>
+
+    <h2>Hintbooks</h2>
+    <div class="link-grid">
+      <a href="examples/Code-Name - Iceman (1989) Hintbook Reader.html"><img src="pics/iceman.png" alt="Iceman"></a>
+      <a href="examples/Gold Rush! (1988) Hintbook Reader.html"><img src="pics/goldrush.png" alt="Gold Rush"></a>
+      <a href="examples/Indiana Jones and the Last Crusade (1989) Hintbook Reader.html"><img src="pics/indy3.png" alt="Indiana Jones"></a>
+      <a href="examples/Laura Bow - The Colonels Bequest (1989) Hintbook Reader.html"><img src="pics/laura1.png" alt="Laura Bow 1"></a>
+      <a href="examples/Laura Bow 2 - The Dagger of Amon Ra (1992) Hintbook Reader.html"><img src="pics/laura2.png" alt="Laura Bow 2"></a>
+      <a href="examples/Leisure Suit Larry 5 - Passionate Patti Does a Little Undercover Work (1991) Hintbook Reader.html"><img src="pics/larry5.png" alt="Larry 5"></a>
+      <a href="examples/Loom (1990) Hintbook Reader.html"><img src="pics/loom.png" alt="Loom"></a>
+      <a href="examples/Maniac Mansion (1987) Hintbook Reader.html"><img src="pics/maniac.png" alt="Maniac Mansion"></a>
+      <a href="examples/Monkey Island 2 - LeChuck's Revenge (1991) Hintbook Reader.html"><img src="pics/monkey2.png" alt="Monkey Island 2"></a>
+      <a href="examples/Zak McKracken and the Alien Mindbenders (1988) Hintbook Reader.html"><img src="pics/zak.png" alt="Zak McKracken"></a>
+    </div>
+
+    <h2>Copy Protection</h2>
+    <div class="link-grid">
+      <a href="examples/Indiana Jones and the Last Crusade (1989) Copy Protection Reader.html"><img src="pics/indy3.png" alt="Indiana Jones"></a>
+      <a href="examples/Loom (1990) Copy Protection Reader.html"><img src="pics/loom.png" alt="Loom"></a>
+    </div>
+  </body>
 </html>
-
-
-
-
-
-
-
-

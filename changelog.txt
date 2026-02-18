@@ -1,4 +1,7 @@
 26-02-11
+- cleaner index.html
+
+26-02-11
 - added Larry 5 Hintbook
 
 26-01-30
